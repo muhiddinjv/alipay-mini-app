@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Miniprogram JSAPI Demo</title>
+  <script src="miniapp.js"></script>
+  <link href="tailwind.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="flex justify-center items-center h-screen">
+    <button id="alert" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-1">
+      my.alert
+    </button>
+    <button id="tradePay" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      my.tradePay
+    </button>
+  </div>
+  <script>
+    var alertButton = document.getElementById('alert');
+    var tradePayButton = document.getElementById('tradePay');
+
+    alertButton.addEventListener('click', function () {
+      my.alert({
+        title: 'Test Alert!!',
+        content: window.navigator.userAgent,
+        buttonText: 'Alert Button',
+        success: function (res) {
+          my.alert({
+            content: 'success!' + JSON.stringify(res),
+          });
+        },
+        fail: function () {
+          my.alert({
+            content: 'fail!',
+          });
+        },
+        complete: function () {
+          my.alert({
+            content: 'complete!',
+          });
+        },
+      });
+    });
+
+    tradePayButton.addEventListener('click', function () {
+      /* my.tradePay({
+        tradeNO: '201711152100110410533667792',
+        success: function (res) {
+          my.alert({
+            content: JSON.stringify(res),
+          });
+        },
+        fail: function (res) {
+          my.alert({
+            content: JSON.stringify(res),
+          });
+        },
+      }); */
+      my.makePhoneCall({ number: '998935399093' });
+    });
+  </script>
+</body>
+
+</html>
