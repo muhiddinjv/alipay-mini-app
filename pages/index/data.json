@@ -1,0 +1,10 @@
+{
+    "Pay_to": "Burger Hub",
+    "Order_info": "Family Combo",
+    "Payment_method": "[---] ***1234 >",
+    "Order_amount": "HKD 163.30 (SGD 29.00)",
+    "Exchange_rate": "1 SGD 5.660 HKD",
+    "Promo_exchange_rate": "1 SGD = 5.6312 HKD",
+    "Alipay_discounts": "-HKD 10.00",
+    "Total_to_pay": "HKD 153.30"
+}
