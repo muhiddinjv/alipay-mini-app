@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>Confirm Payment</title>
-    <script src="miniapp.js"></script>
-    <link href="tailwind.css" rel="stylesheet" />
+    <script src="pages/html/miniapp.js"></script>
+    <link href="pages/html/tailwind.css" rel="stylesheet" />
   </head>
 
   <body class="h-screen pt-5 flex justify-center bg-gray-300 text-sm">
@@ -26,7 +26,7 @@
 
       async function getPaymentDetails() {
         try {
-          const res = await fetch("data.json");
+          const res = await fetch("pages/html/data.json");
           const data = await res.json();
           
           paymentDetails.innerHTML = `
